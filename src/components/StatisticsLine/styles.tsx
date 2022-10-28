@@ -1,6 +1,7 @@
 import { Fonts } from 'src/types'
 import styled from 'styled-components'
 import { StatisticsLineContainerItemsProps } from 'src/components/StatisticsLine/types'
+import { BREAKPOINTS } from 'src/constants'
 
 export const StatisticsLineContainer = styled.div`
   padding: 10px 40px;
@@ -23,6 +24,11 @@ export const StatisticsLineHeaderContainer = styled.div`
   display: flex;
   align-items: center;
   z-index: 100;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    height: 30px;
+    width: 110px;
+    padding-left: 20px;
+  }
 `
 
 export const StatisticsLineHeader = styled.h3`
@@ -37,7 +43,10 @@ export const StatisticsLineContainerItems = styled.div<StatisticsLineContainerIt
   transform: ${props => `translate(${props.translate}px)`};
   transition: transform 5s;
   gap: 30px;
-  overflow-x: scroll;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    transform: ${props => `translate(${props.translate}px)`};
+    transition: transform 20s;
+  }
 `
 
 export const StatisticsLineContainerItem = styled.div`
@@ -49,6 +58,9 @@ export const StatisticsLineItem = styled.p`
   color: #ebebeb;
   font-size: 14px;
   font-family: ${Fonts.regular};
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    width: 200px;
+  }
 `
 export const StatisticsLineItemImage = styled.img`
   margin: 10px;

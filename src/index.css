@@ -13,14 +13,26 @@
   src: url('./fonts/TT\ Severs\ Italic.otf');
 }
 
+@font-face {
+  font-family: 'TT Severs Medium';
+  src: url('./fonts/TT\ Severs\ Medium.otf');
+}
 
-body {
+@font-face {
+  font-family: 'TT Severs DemiBold';
+  src: url('./fonts/TT\ Severs\ DemiBold.otf');
+}
+
+
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'TT Severs';
   font-size: 16px;
+  width: 100%;
 }
+
 
 * {
   margin: 0;

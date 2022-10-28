@@ -20,6 +20,7 @@ export const NavbarItem = styled.a`
   font-family: ${Fonts.demiBold};
   display: flex;
   align-items: center;
+  cursor: pointer;
   &:last-child {
     margin-left: auto;
   }

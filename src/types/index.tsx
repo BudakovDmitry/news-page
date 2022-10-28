@@ -22,3 +22,10 @@ export enum Language {
   UA = 'UA',
   RU = 'RU',
 }
+
+export type StatisticsType = {
+  id: number
+  name: string
+  value: string
+  image: string
+}

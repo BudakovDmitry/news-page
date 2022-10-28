@@ -5,7 +5,7 @@ import { NavbarItemProps } from 'src/components/Navbar/types'
 
 export const NavbarContainer = styled.div`
   padding: 20px 40px;
-  height: 40px;
+  height: 20px;
   display: flex;
   align-items: center;
   gap: 40px;

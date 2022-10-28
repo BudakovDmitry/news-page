@@ -58,6 +58,50 @@ const initialState = {
     },
   ],
   language: 'UA',
+  statistics: [
+    {
+      id: 0,
+      name: 'Особовий склад',
+      value: '~36 200',
+      image: 'soldiers.png'
+    },
+    {
+      id: 1,
+      name: 'Танки',
+      value: '1589',
+      image: 'tank.png'
+    },
+    {
+      id: 2,
+      name: 'Артсистеми',
+      value: '4578',
+      image: 'artillery-systems.png'
+    },
+    {
+      id: 3,
+      name: 'Літаки',
+      value: '220',
+      image: 'aircraft.png'
+    },
+    {
+      id: 4,
+      name: 'РСЗВ',
+      value: '246',
+      image: 'rszv.png'
+    },
+    {
+      id: 5,
+      name: 'Гелікоптери',
+      value: '190',
+      image: 'helicopter.png'
+    },
+    {
+      id: 6,
+      name: 'ББМ',
+      value: '4578',
+      image: 'bbm.png'
+    },
+  ]
 }
 
 const reducer = (state = initialState, action) => {

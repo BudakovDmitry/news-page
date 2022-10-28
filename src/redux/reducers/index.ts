@@ -60,6 +60,30 @@ const initialState = {
   language: 'UA',
 }
 
-const reducer = (state = initialState, action) => state
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'UPDATE_ACTIVE_SECTION':
+      return {
+        ...state,
+        navbarSections: state.navbarSections.map(section => {
+        if (section.active === true) {
+          return { 
+            ...section,
+            active: false
+          }
+        }
+        if (section.id === action.payload.id) {
+          return { 
+            ...section,
+            active: true
+          }
+        }
+        return section
+      })
+    }
+    default:
+      return state
+  }
+}
 
 export default reducer

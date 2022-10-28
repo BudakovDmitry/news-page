@@ -1,22 +1,22 @@
+import { useNavbar } from 'src/components/Navbar/useNavbar'
 import * as Styled from 'src/components/Navbar/styles'
-import { useSelector } from 'react-redux'
-import { NavbarSectionType, LanguageState, Language } from 'src/types'
+
+import { Language } from 'src/types'
 
 const FireIcon = require('src/images/fire-icon.png')
 const DotLiveIcon = require('src/images/dot-live-icon.png')
 
-type NavbarState = {
-  navbarSections: NavbarSectionType[]
-}
-
 const Navbar = () => {
-  const sections = useSelector((state: NavbarState) => state.navbarSections)
-  const language = useSelector((state: LanguageState) => state.language)
+  const { sections, language, handleActiveSection } = useNavbar()
 
   return (
     <Styled.NavbarContainer>
       {sections.map(section => (
-        <Styled.NavbarItem key={section.id} active={section.active}>
+        <Styled.NavbarItem
+          key={section.id}
+          active={section.active}
+          onClick={() => handleActiveSection(section)}
+        >
           {section.hotRubric ? (
             <Styled.NavbarFireIcon src={FireIcon} alt="fire-icon" />
           ) : sections.length - 1 === section.id ? (

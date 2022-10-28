@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <Styled.NavbarContainer>
       {sections.map(section => (
-        <Styled.NavbarItem key={section.id}>
+        <Styled.NavbarItem key={section.id} active={section.active}>
           {section.hotRubric ? (
             <Styled.NavbarFireIcon src={FireIcon} alt="fire-icon" />
           ) : sections.length - 1 === section.id ? (

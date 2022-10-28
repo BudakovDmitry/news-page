@@ -11,6 +11,7 @@ export type NavbarSectionType = {
   sectionUa: string
   sectionRu: string
   hotRubric: boolean
+  active: boolean
 }
 
 export type LanguageState = {

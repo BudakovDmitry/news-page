@@ -1,25 +1,30 @@
 import * as Styled from 'src/components/Navbar/styles'
+import { useSelector } from 'react-redux'
+import { NavbarSectionType, LanguageState, Language } from 'src/types'
 
 const FireIcon = require('src/images/fire-icon.png')
 const DotLiveIcon = require('src/images/dot-live-icon.png')
 
+type NavbarState = {
+  navbarSections: NavbarSectionType[]
+}
+
 const Navbar = () => {
+  const sections = useSelector((state: NavbarState) => state.navbarSections)
+  const language = useSelector((state: LanguageState) => state.language)
+
   return (
     <Styled.NavbarContainer>
-      <Styled.NavbarItem>
-        <Styled.NavbarFireIcon src={FireIcon} alt="fire-icon" />
-        війна
-      </Styled.NavbarItem>
-      <Styled.NavbarItem>новини</Styled.NavbarItem>
-      <Styled.NavbarItem>політика</Styled.NavbarItem>
-      <Styled.NavbarItem>економіка</Styled.NavbarItem>
-      <Styled.NavbarItem>суспільство</Styled.NavbarItem>
-      <Styled.NavbarItem>погляди</Styled.NavbarItem>
-      <Styled.NavbarItem>світ</Styled.NavbarItem>
-      <Styled.NavbarItem>
-        <Styled.NavbarLiveIcon src={DotLiveIcon} alt="dot-live-icon" />
-        LIVE
-      </Styled.NavbarItem>
+      {sections.map(section => (
+        <Styled.NavbarItem key={section.id}>
+          {section.hotRubric ? (
+            <Styled.NavbarFireIcon src={FireIcon} alt="fire-icon" />
+          ) : sections.length - 1 === section.id ? (
+            <Styled.NavbarLiveIcon src={DotLiveIcon} alt="dot-live-icon" />
+          ) : null}
+          {language === Language.UA ? section.sectionUa : section.sectionRu}
+        </Styled.NavbarItem>
+      ))}
     </Styled.NavbarContainer>
   )
 }

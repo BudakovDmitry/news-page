@@ -1,5 +1,13 @@
+import Navbar from 'src/components/Navbar'
+import Header from 'src/components/Header'
+
 const App = () => {
-  return <h2>App</h2>
+  return (
+    <div>
+      <Header />
+      <Navbar />
+    </div>
+  )
 }
 
 export default App

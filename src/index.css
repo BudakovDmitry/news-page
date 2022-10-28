@@ -1,6 +1,28 @@
+@font-face {
+  font-family: 'TT Severs';
+  src: url('./fonts/TT\ Severs\ Regular.otf');
+}
+
+@font-face {
+  font-family: 'TT Severs Bold';
+  src: url('./fonts/TT\ Severs\ Bold.otf');
+}
+
+@font-face {
+  font-family: 'TT Severs Italic';
+  src: url('./fonts/TT\ Severs\ Italic.otf');
+}
+
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'TT Severs';
+  font-size: 16px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}

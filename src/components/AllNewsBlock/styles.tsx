@@ -14,11 +14,12 @@ export const AllNewsBlockContainer = styled.div`
     'all-news editors-сhoice'
     'all-news regions';
   @media (max-width: ${BREAKPOINTS.small}px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
     padding: 0;
     width: 100%;
     gap: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 `
 export const AllNewsContainer = styled.div`

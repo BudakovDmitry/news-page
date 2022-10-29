@@ -44,3 +44,10 @@ export type NewsType = {
   infoImage: string
   breaking: boolean
 }
+
+export type PhotoNewsType = {
+  id: number
+  image: string
+  date: string
+  text: string
+}

@@ -35,28 +35,6 @@ export const AllNewsHeaderLink = styled.a`
   border-bottom: 1px solid #000000;
 `
 
-export const AllNewsFilterContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 30px;
-`
-
-export const AllNewsFilterButton = styled.button<AllNewsFilterButtonProps>`
-  color: ${props => (props.active ? '#ff7534' : '#919191')};
-  font-family: ${Fonts.medium};
-  border-radius: 4px;
-  background: ${props => (props.active ? '#ffeae0' : 'none')};
-  border: none;
-  align-items: center;
-  font-size: 16px;
-  cursor: pointer;
-  padding: 10px;
-  &:hover {
-    color: #ff7534;
-  }
-`
-
 export const AllNewsButtonMore = styled.button`
   width: 80%;
   height: 38px;

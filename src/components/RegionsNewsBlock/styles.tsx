@@ -1,11 +1,15 @@
 import { Fonts } from 'src/types'
 import styled from 'styled-components'
+import { BREAKPOINTS } from 'src/constants'
 
 export const RegionsNewsBlockContainer = styled.div`
   background-color: #ffffff;
   padding: 20px 10px 48px 10px;
   border-radius: 12px;
   position: relative;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    min-width: 80%;
+  }
 `
 
 export const RegionsNewsBlockTitle = styled.h3`

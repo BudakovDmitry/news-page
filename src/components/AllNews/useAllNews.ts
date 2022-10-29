@@ -7,14 +7,9 @@ type AllNewsState = {
 }
 
 export const useAllNews = () => {
-  const [activeFilter, setActiveFilter] = useState(0)
   const news = useSelector((state: AllNewsState) => state.allNews)
 
-  const handleActiveFilter = (index: number) => setActiveFilter(index)
-
   return {
-    activeFilter,
-    handleActiveFilter,
     news
   }
 }

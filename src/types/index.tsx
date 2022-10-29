@@ -64,3 +64,8 @@ export type RegionsNewsType = {
   date: string
   news: DateNewsType[]
 }
+
+export type FilterType = {
+  id: number
+  name: string
+}

@@ -1,6 +1,9 @@
 import RegionsNewsBlock from 'src/components/RegionsNewsBlock'
 import * as Styled from 'src/components/RegionsNews/styles'
 import { useRegionsNews } from 'src/components/RegionsNews/useRegionsNews'
+import { isMobile } from 'src/helpers'
+import Filter from 'src/components/Filter'
+import { regionsNewsFilters } from 'src/components/RegionsNews/constants'
 
 const RegionsNews = () => {
   const { news } = useRegionsNews()
@@ -15,7 +18,8 @@ const RegionsNews = () => {
           Всі новини розділу
         </Styled.RegionsNewsHeaderLink>
       </Styled.RegionsNewsHeader>
-      <Styled.RegionsNewsGridContainer>
+      {isMobile() && <Filter filterItems={regionsNewsFilters} />}
+      <Styled.RegionContainer>
         {news.map(item => (
           <RegionsNewsBlock
             key={item.id}
@@ -23,7 +27,7 @@ const RegionsNews = () => {
             news={item.news}
           />
         ))}
-      </Styled.RegionsNewsGridContainer>
+      </Styled.RegionContainer>
     </Styled.RegionsNewsContainer>
   )
 }

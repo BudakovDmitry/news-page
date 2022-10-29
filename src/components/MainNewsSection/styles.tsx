@@ -4,6 +4,7 @@ import {
   MainNewsSectionContainerProps,
   MainNewsSwitchButtonProps,
 } from 'src/components/MainNewsSection/types'
+import { BREAKPOINTS } from 'src/constants'
 
 export const MainNewsSectionContainer = styled.div<MainNewsSectionContainerProps>`
   height: 654px;
@@ -11,6 +12,12 @@ export const MainNewsSectionContainer = styled.div<MainNewsSectionContainerProps
   position: relative;
   background: ${props =>
     `url(${require(`src/images/${props.background}`)}) 0 0 / cover no-repeat`};
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    overflow: hidden;
+    height: 550px;
+    background: ${props =>
+      `url(${require(`src/images/${props.background}`)})  -600px 0/cover no-repeat`};
+  }
 `
 
 export const MainNewsSectionContentContainer = styled.div`
@@ -18,6 +25,12 @@ export const MainNewsSectionContentContainer = styled.div`
   bottom: 50px;
   left: 0;
   padding: 0 40px;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    width: 100%;
+    bottom: 50px;
+    left: 0;
+    padding: 0 20px;
+  }
 `
 
 export const MainNewsSectionHeader = styled.h2`
@@ -26,6 +39,10 @@ export const MainNewsSectionHeader = styled.h2`
   width: 60%;
   font-size: 40px;
   margin-bottom: 24px;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    font-size: 24px;
+    width: 100%;
+  }
 `
 
 export const MainNewsSwitchContainer = styled.div`
@@ -34,6 +51,9 @@ export const MainNewsSwitchContainer = styled.div`
   width: 150px;
   justify-content: space-between;
   margin-bottom: 24px;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    display: none;
+  }
 `
 
 export const MainNewsSwitchButton = styled.button<MainNewsSwitchButtonProps>`
@@ -52,6 +72,9 @@ export const MainNewsSwitchAmountNews = styled.p`
 export const MainNewsSliderNewsContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    overflow-x: scroll;
+  }
 `
 
 export const MainNewsSliderNewsItem = styled.div`
@@ -61,6 +84,9 @@ export const MainNewsSliderNewsItem = styled.div`
   justify-content: space-between;
   padding: 8px 16px 8px 8px;
   cursor: pointer;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    margin-right: 20px;
+  }
 `
 
 export const MainNewsSliderNewsItemImage = styled.img`
@@ -68,6 +94,9 @@ export const MainNewsSliderNewsItemImage = styled.img`
   width: 80px;
   object-fit: cover;
   margin-right: 10px;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    width: 80px;
+  }
 `
 
 export const MainNewsSliderNewsItemText = styled.p`

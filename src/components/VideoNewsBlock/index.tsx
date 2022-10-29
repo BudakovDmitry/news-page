@@ -1,5 +1,6 @@
 import PhotoNews from 'src/components/PhotoNews'
 import * as Styled from 'src/components/VideoNewsBlock/styles'
+import { isMobile } from 'src/helpers'
 
 const ArrowRight = require('src/images/arrow-white-icon.png')
 
@@ -22,7 +23,7 @@ const VideoNewsBlock = () => {
               image="5.png"
               date="05 серпня 11:00"
               text='"Це не Джошуа": Усик розповів, кого вважає своїм головним суперником'
-              large={true}
+              large={!isMobile()}
               colorText="#ffffff"
               icon={require('src/images/play-icon.png')}
             />
@@ -57,6 +58,9 @@ const VideoNewsBlock = () => {
               />
             </Styled.VideoNewsSmallContainer>
           </Styled.VideoNewsContainer>
+          {isMobile() && (
+            <Styled.VideoNewsMoreButton>Більше</Styled.VideoNewsMoreButton>
+          )}
         </Styled.VideoNewsBlockContainer>
       </Styled.GradientBox>
     </Styled.VideoNewsBlock>

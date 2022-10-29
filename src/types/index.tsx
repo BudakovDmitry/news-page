@@ -29,3 +29,9 @@ export type StatisticsType = {
   value: string
   image: string
 }
+
+export type MainNewsType = {
+  id: number
+  news: string
+  image: string
+}

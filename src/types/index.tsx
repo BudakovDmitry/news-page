@@ -51,3 +51,16 @@ export type PhotoNewsType = {
   date: string
   text: string
 }
+
+export type DateNewsType = {
+  id: number
+  date: string
+  news: NewsType[]
+}
+
+export type RegionsNewsType = {
+  id: number
+  region: string
+  date: string
+  news: DateNewsType[]
+}

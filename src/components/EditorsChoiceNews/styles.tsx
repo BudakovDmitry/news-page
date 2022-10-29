@@ -21,10 +21,9 @@ export const EditorsChoiceNewsHeader = styled.h2`
 export const EditorsChoiceNewsGridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 52px 32px;
   grid-template-areas:
-    '. . .'
     '. . .'
     '. . .';
   @media (max-width: ${BREAKPOINTS.small}px) {

@@ -5,7 +5,7 @@ import { BREAKPOINTS } from 'src/constants'
 
 export const AllNewsContainer = styled.div`
   background-color: #ffffff;
-  padding: 20px;
+  padding: 30px 20px 20px 20px;
   border-radius: 12px;
   text-align: center;
   position: relative;
@@ -18,7 +18,7 @@ export const AllNewsHeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 `
 
 export const AllNewsHeader = styled.h3`
@@ -39,6 +39,7 @@ export const AllNewsFilterContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
+  margin-bottom: 30px;
 `
 
 export const AllNewsFilterButton = styled.button<AllNewsFilterButtonProps>`
@@ -62,7 +63,7 @@ export const AllNewsButtonMore = styled.button`
   background-color: #ffffff;
   border: 1px solid #979ea9;
   border-radius: 4px;
-  margin: 20px auto;
+  margin: 26px auto;
   font-size: 16px;
   font-family: ${Fonts.medium};
   cursor: pointer;

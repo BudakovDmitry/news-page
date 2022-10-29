@@ -1,6 +1,7 @@
 import EditorsChoiceNews from 'src/components/EditorsChoiceNews'
 import AllNews from 'src/components/AllNews'
 import * as Styled from 'src/components/AllNewsBlock/styles'
+import RegionsNews from 'src/components/RegionsNews'
 
 const AllNewsBlock = () => {
   return (
@@ -11,7 +12,9 @@ const AllNewsBlock = () => {
       <Styled.EditorsChoiceNewsContainer>
         <EditorsChoiceNews />
       </Styled.EditorsChoiceNewsContainer>
-      <Styled.RegionsNewsContainer></Styled.RegionsNewsContainer>
+      <Styled.RegionsNewsContainer>
+        <RegionsNews />
+      </Styled.RegionsNewsContainer>
     </Styled.AllNewsBlockContainer>
   )
 }

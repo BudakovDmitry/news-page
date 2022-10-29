@@ -35,3 +35,12 @@ export type MainNewsType = {
   news: string
   image: string
 }
+
+export type NewsType = {
+  id: number
+  time: string
+  text: string
+  info: string
+  infoImage: string
+  breaking: boolean
+}

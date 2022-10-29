@@ -4,6 +4,7 @@ import store from 'src/redux/store'
 import { Provider } from 'react-redux'
 import StatisticsLine from 'src/components/StatisticsLine'
 import MainNewsSection from 'src/components/MainNewsSection'
+import AllNewsBlock from 'src/components/AllNewsBlock'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Navbar />
       <StatisticsLine />
       <MainNewsSection />
+      <AllNewsBlock />
     </Provider>
   )
 }

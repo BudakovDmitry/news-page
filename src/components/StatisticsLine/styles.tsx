@@ -14,7 +14,7 @@ export const StatisticsLineContainer = styled.div`
   overflow-x: hidden;
 `
 export const StatisticsLineHeaderContainer = styled.div`
-  height: 28px;
+  height: 30px;
   width: 120px;
   position: absolute;
   left: 0px;

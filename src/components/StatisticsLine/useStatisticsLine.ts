@@ -10,8 +10,6 @@ type StatisticsState = {
 
 
 export const useStatisticsLine = () => {
-
-  console.log(navigator.userAgent)
   const statistics = useSelector((state: StatisticsState) => state.statistics)
   const [translate, setTranslate] = useState<number>(DEFAULT_TRANSLATE)
   const getValueTranslate = (): number => isMobile() ? MOBILE_TRANSLATE : DESKTOP_TRANSLATE

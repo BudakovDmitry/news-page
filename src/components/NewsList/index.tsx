@@ -1,5 +1,5 @@
 import { NewsType } from 'src/types'
-import News from 'src/components/News'
+import TextNews from 'src/components/TextNews'
 import * as Styled from 'src/components/NewsList/styles'
 
 type NewsListProps = {
@@ -10,7 +10,7 @@ const NewsList = ({ news = [] }: NewsListProps) => {
   return (
     <Styled.NewsListContainer>
       {news.map(item => (
-        <News
+        <TextNews
           key={item.id}
           time={item.time}
           text={item.text}

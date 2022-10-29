@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {
   NewsInfoDescriptionProps,
   NewsTextProps,
-} from 'src/components/News/types'
+} from 'src/components/TextNews/types'
 
 export const NewsContainer = styled.div`
   padding: 20px 10px;

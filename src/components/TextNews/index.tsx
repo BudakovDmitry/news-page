@@ -1,4 +1,4 @@
-import * as Styled from 'src/components/News/styles'
+import * as Styled from 'src/components/TextNews/styles'
 
 type NewsProps = {
   time: string
@@ -8,7 +8,7 @@ type NewsProps = {
   breaking: boolean
 }
 
-const News = ({
+const TextNews = ({
   time = '',
   text = '',
   info = '',
@@ -34,4 +34,4 @@ const News = ({
   )
 }
 
-export default News
+export default TextNews

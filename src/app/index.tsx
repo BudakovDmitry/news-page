@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import StatisticsLine from 'src/components/StatisticsLine'
 import MainNewsSection from 'src/components/MainNewsSection'
 import AllNewsBlock from 'src/components/AllNewsBlock'
+import VideoNewsBlock from 'src/components/VideoNewsBlock'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <StatisticsLine />
       <MainNewsSection />
       <AllNewsBlock />
+      <VideoNewsBlock />
     </Provider>
   )
 }

@@ -5,3 +5,12 @@ export type PhotoNewsContainerProps = {
 export type PhotoNewsImageProps = {
   large: boolean
 }
+
+export type PhotoNewsTextProps = {
+  large: boolean
+  color: string
+}
+
+export type PhotoNewsIconProps = {
+  large: boolean
+}

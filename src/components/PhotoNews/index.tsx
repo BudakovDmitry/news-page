@@ -5,6 +5,8 @@ type PhotoNewsProps = {
   date: string
   text: string
   large?: boolean
+  colorText?: string
+  icon?: string
 }
 
 const PhotoNews = ({
@@ -12,6 +14,8 @@ const PhotoNews = ({
   date = '',
   text = '',
   large = false,
+  colorText = '',
+  icon = '',
 }: PhotoNewsProps) => {
   return (
     <Styled.PhotoNewsContainer large={large}>
@@ -21,7 +25,10 @@ const PhotoNews = ({
         large={large}
       />
       <Styled.PhotoNewsDate>{date}</Styled.PhotoNewsDate>
-      <Styled.PhotoNewsText>{text}</Styled.PhotoNewsText>
+      <Styled.PhotoNewsText color={colorText} large={large}>
+        {text}
+      </Styled.PhotoNewsText>
+      {icon && <Styled.PhotoNewsIcon large={large} src={icon} alt="icon" />}
     </Styled.PhotoNewsContainer>
   )
 }

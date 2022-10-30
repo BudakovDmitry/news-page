@@ -1,6 +1,5 @@
 import { Fonts } from 'src/types'
 import styled from 'styled-components'
-import { AllNewsFilterButtonProps } from 'src/components/AllNews/types'
 import { BREAKPOINTS } from 'src/constants'
 
 export const AllNewsContainer = styled.div`

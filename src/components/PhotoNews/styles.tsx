@@ -21,6 +21,7 @@ export const PhotoNewsDate = styled.p`
   color: #707070;
   margin-bottom: 15px;
   text-align: start;
+  text-transform: uppercase;
 `
 
 export const PhotoNewsText = styled.p<PhotoNewsTextProps>`

@@ -89,6 +89,7 @@ export const MoreNewsLinkImage = styled.img``
 
 export const VideoNewsContainer = styled.div`
   display: flex;
+  justify-content: space-between;
   @media (max-width: ${BREAKPOINTS.small}px) {
     flex-direction: column;
     gap: 52px;

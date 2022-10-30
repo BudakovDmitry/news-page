@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { BREAKPOINTS } from 'src/constants'
 
 export const PreviewListContainer = styled.div`
   display: flex;
@@ -6,11 +7,14 @@ export const PreviewListContainer = styled.div`
   gap: 32px;
   width: 950px;
   position: relative;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    width: 300px;
+    overflow-x: scroll;
+  }
 `
 
 export const GradientBox = styled.div`
   width: 30px;
-
   &:after {
     content: '';
     display: block;
@@ -28,6 +32,8 @@ export const GradientBox = styled.div`
     );
     z-index: 200;
   }
+  @media (max-width: ${BREAKPOINTS.small}px) {
+  }
 `
 
 export const PreviewsContainer = styled.div`
@@ -36,6 +42,9 @@ export const PreviewsContainer = styled.div`
   gap: 32px;
   width: 950px;
   overflow-x: scroll;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    overflow-x: hidden;
+  }
 `
 
 export const MoreLink = styled.a`
@@ -44,6 +53,9 @@ export const MoreLink = styled.a`
   top: 35px;
   z-index: 300;
   cursor: pointer;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    display: none;
+  }
 `
 
 export const MoreLinkIcon = styled.img``

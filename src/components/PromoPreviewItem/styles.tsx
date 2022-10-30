@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { BREAKPOINTS } from 'src/constants'
 
 export const PromoPreviewItemContainer = styled.div`
   height: 105px;
@@ -6,6 +7,9 @@ export const PromoPreviewItemContainer = styled.div`
   border-radius: 8px;
   padding: 16px;
   background-color: #f6f6f6;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    min-width: 250px;
+  }
 `
 
 export const PromoPreviewItemDate = styled.p`

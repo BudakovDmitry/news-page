@@ -69,3 +69,17 @@ export type FilterType = {
   id: number
   name: string
 }
+
+export type ColumnType = {
+  id: number
+  text: string
+  date: string
+}
+
+export type ColumnistType = {
+  id: number
+  name: string
+  profession: string
+  avatar: string
+  column: ColumnType[]
+}

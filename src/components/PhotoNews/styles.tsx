@@ -19,9 +19,9 @@ export const PhotoNewsImage = styled.img<PhotoNewsImageProps>`
 
 export const PhotoNewsDate = styled.p`
   color: #707070;
-  margin-bottom: 15px;
   text-align: start;
   text-transform: uppercase;
+  margin-right: 20px;
 `
 
 export const PhotoNewsText = styled.p<PhotoNewsTextProps>`
@@ -37,4 +37,23 @@ export const PhotoNewsIcon = styled.img<PhotoNewsIconProps>`
   left: 10px;
   opacity: ${props => (props.large ? '1' : '0.5')};
   width: ${props => (props.large ? '40px' : '20px')};
+`
+
+export const NewsInfo = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+`
+
+export const NewsType = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+export const NewsTypeIcon = styled.img`
+  margin-right: 15px;
+`
+
+export const NewsTypeDescription = styled.p`
+  color: #979ea9;
 `

@@ -1,14 +1,17 @@
 import NewsList from 'src/components/NewsList'
 import PhotoNews from 'src/components/PhotoNews'
 import * as Styled from 'src/components/Rubric/styles'
-import { useAllNews } from 'src/components/AllNews/useAllNews'
+import { RubricType } from 'src/types'
 
-const Rubric = () => {
-  const { news } = useAllNews()
+type RubricProps = {
+  rubric: RubricType
+}
+
+const Rubric = ({ rubric }: RubricProps) => {
   return (
     <Styled.RubricContainer>
       <Styled.RubricHeaderContainer>
-        <Styled.RubricHeaderTitle>Політика</Styled.RubricHeaderTitle>
+        <Styled.RubricHeaderTitle>{rubric.title}</Styled.RubricHeaderTitle>
         <Styled.RubricHeaderLink>Всі новини розділу</Styled.RubricHeaderLink>
       </Styled.RubricHeaderContainer>
       <Styled.RubricContentContainer>
@@ -16,27 +19,27 @@ const Rubric = () => {
           <Styled.LargeNews>
             <PhotoNews
               large={true}
-              image="2.png"
-              date="05 january 2022"
-              text='У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною.'
+              image={rubric.news.mainLargeNews[0].image}
+              date={rubric.news.mainLargeNews[0].date}
+              text={rubric.news.mainLargeNews[0].text}
+              type={rubric.news.mainLargeNews[0].type}
+              typeIcon={rubric.news.mainLargeNews[0].typeIcon}
             />
           </Styled.LargeNews>
-          <PhotoNews
-            image="2.png"
-            date="05 january 2022"
-            text='У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною.'
-          />
-          <PhotoNews
-            image="2.png"
-            date="05 january 2022"
-            text='У "Слузі" пояснили, чому в росії знову заговорили про переговори з Україною.'
-          />
+          {rubric.news.mainSmallNews.map(news => (
+            <PhotoNews
+              key={news.id}
+              image={news.image}
+              date={news.date}
+              text={news.text}
+            />
+          ))}
         </Styled.NewsWithPhotoContainer>
         <Styled.RubricTextNewsContainer>
           <Styled.RubricTextNewsHeader>
             Новини розділу
           </Styled.RubricTextNewsHeader>
-          <NewsList news={news.slice(0, 5)} />
+          <NewsList news={rubric.news.textNews.slice(0, 5)} />
           <Styled.RubricTextNewsMoreContainer>
             <Styled.RubricTextNewsMoreText>
               Більше

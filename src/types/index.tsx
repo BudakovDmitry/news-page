@@ -50,6 +50,8 @@ export type PhotoNewsType = {
   image: string
   date: string
   text: string
+  type: string
+  typeIcon: string
 }
 
 export type DateNewsType = {
@@ -82,4 +84,16 @@ export type ColumnistType = {
   profession: string
   avatar: string
   column: ColumnType[]
+}
+
+export type RubricNewsType = {
+  mainLargeNews: PhotoNewsType[]
+  mainSmallNews: PhotoNewsType[]
+  textNews: NewsType[]
+}
+
+export type RubricType = {
+  id: number
+  title: string
+  news: RubricNewsType
 }

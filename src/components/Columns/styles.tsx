@@ -8,6 +8,7 @@ export const ColumnsContainer = styled.div`
   border-radius: 12px;
   max-width: 304px;
   text-align: center;
+  height: 930px;
   @media (max-width: ${BREAKPOINTS.small}px) {
     background: none;
     padding: 10px 0 10px 10px;
@@ -55,7 +56,7 @@ export const AllColumnsButton = styled.button`
   border-radius: 4px;
   height: 36px;
   font-size: 16px;
-  margin-top: 20px;
+  margin-top: 30px;
   cursor: pointer;
   &:hover {
     background-color: #ebebeb;

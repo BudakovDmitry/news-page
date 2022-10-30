@@ -1,5 +1,6 @@
 import { Fonts } from 'src/types'
 import styled from 'styled-components'
+import { BREAKPOINTS } from 'src/constants'
 
 export const RubricContainer = styled.div`
   background-color: #ffffff;
@@ -8,6 +9,12 @@ export const RubricContainer = styled.div`
   height: 950px;
   padding: 40px;
   margin-bottom: 40px;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    border-radius: 0;
+    margin: 0;
+    margin-bottom: 30px;
+    height: 100%;
+  }
 `
 
 export const RubricHeaderContainer = styled.div`
@@ -19,11 +26,17 @@ export const RubricHeaderContainer = styled.div`
 export const RubricHeaderTitle = styled.h2`
   font-family: ${Fonts.bold};
   font-size: 32px;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    font-size: 26px;
+  }
 `
 
 export const RubricHeaderLink = styled.p`
   color: #ff7534;
   cursor: pointer;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    font-size: 12px;
+  }
 `
 
 export const RubricContentContainer = styled.div`
@@ -40,6 +53,10 @@ export const NewsWithPhotoContainer = styled.div`
   grid-template-areas:
     'large large'
     '. .';
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 export const LargeNews = styled.div`

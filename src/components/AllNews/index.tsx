@@ -7,7 +7,7 @@ import Filter from 'src/components/Filter'
 const ArrowCicleIcon = require('src/images/arrow-cicle-icon.png')
 
 const AllNews = () => {
-  const { news } = useAllNews()
+  const { news, activeFilter, handleChangeFilter } = useAllNews()
 
   return (
     <Styled.AllNewsContainer>
@@ -15,7 +15,11 @@ const AllNews = () => {
         <Styled.AllNewsHeader>Всі новини</Styled.AllNewsHeader>
         <Styled.AllNewsHeaderLink>Архів</Styled.AllNewsHeaderLink>
       </Styled.AllNewsHeaderContainer>
-      <Filter filterItems={allNewsFilters} />
+      <Filter
+        filterItems={allNewsFilters}
+        active={activeFilter}
+        onChange={handleChangeFilter}
+      />
       <Styled.GradientBox>
         <NewsList news={news} />
       </Styled.GradientBox>

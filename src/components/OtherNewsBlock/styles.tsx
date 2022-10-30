@@ -8,7 +8,9 @@ export const OtherNewsBlockContainer = styled.div`
   display: flex;
   gap: 32px;
   @media (max-width: ${BREAKPOINTS.small}px) {
-    padding: 40px 0 40px 40px;
+    padding: 40px 0 40px 0;
+    display: block;
+    flex-direction: column;
   }
 `
 

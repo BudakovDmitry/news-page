@@ -8,8 +8,13 @@ type AllNewsState = {
 
 export const useAllNews = () => {
   const news = useSelector((state: AllNewsState) => state.allNews)
+  const [activeFilter, setActiveFilter] = useState(0)
+
+  const handleChangeFilter = (id: number) => setActiveFilter(id)
 
   return {
-    news
+    news,
+    activeFilter,
+    handleChangeFilter
   }
 }

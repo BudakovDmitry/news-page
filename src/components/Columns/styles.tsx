@@ -13,6 +13,9 @@ export const ColumnsContainer = styled.div`
     background: none;
     padding: 10px 0 10px 10px;
     max-width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    margin-left: 30px;
   }
 `
 

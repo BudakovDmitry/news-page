@@ -6,9 +6,7 @@ import Filter from 'src/components/Filter'
 import { regionsNewsFilters } from 'src/components/RegionsNews/constants'
 
 const RegionsNews = () => {
-  const { news } = useRegionsNews()
-
-  console.log('news', news)
+  const { news, activeFilter, handleChangeFilter } = useRegionsNews()
 
   return (
     <Styled.RegionsNewsContainer>
@@ -18,7 +16,13 @@ const RegionsNews = () => {
           Всі новини розділу
         </Styled.RegionsNewsHeaderLink>
       </Styled.RegionsNewsHeader>
-      {isMobile() && <Filter filterItems={regionsNewsFilters} />}
+      {isMobile() && (
+        <Filter
+          filterItems={regionsNewsFilters}
+          active={activeFilter}
+          onChange={handleChangeFilter}
+        />
+      )}
       <Styled.RegionContainer>
         {news.map(item => (
           <RegionsNewsBlock

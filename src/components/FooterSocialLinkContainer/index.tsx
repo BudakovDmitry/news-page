@@ -1,5 +1,6 @@
 import { useFooterSocialLinkContainer } from 'src/components/FooterSocialLinkContainer/useFooterSocialLinkContainer'
 import * as Styled from 'src/components/FooterSocialLinkContainer/styles'
+import { SocialLinkType } from 'src/types'
 
 const FooterSocialLinkContainer = () => {
   const { socialLinks } = useFooterSocialLinkContainer()
@@ -10,7 +11,7 @@ const FooterSocialLinkContainer = () => {
         Новини у зручному форматі
       </Styled.SocialLinkContainerHeader>
       <Styled.SocialLinkContainer>
-        {socialLinks.map(link => (
+        {socialLinks.map((link: SocialLinkType) => (
           <Styled.Link key={link.id}>
             <Styled.LinkImage src={require(`src/images/${link.icon}`)} />
             <Styled.LinkText>{link.name}</Styled.LinkText>

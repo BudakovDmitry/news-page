@@ -9,7 +9,7 @@ type NewsListProps = {
 const NewsList = ({ news = [] }: NewsListProps) => {
   return (
     <Styled.NewsListContainer>
-      {news.map(item => (
+      {news.map((item: NewsType) => (
         <TextNews
           key={item.id}
           time={item.time}

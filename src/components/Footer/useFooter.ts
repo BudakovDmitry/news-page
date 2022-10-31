@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux"
-import { FooterNavBlock, NavItemType } from 'src/types'
+import { FooterNavBlockType, NavItemType } from 'src/types'
 
 type FooterNavItemsState = {
-  footerNavItems: FooterNavBlock[]
+  footerNavItems: FooterNavBlockType[]
 }
 
 type NavItemsState = {
@@ -10,8 +10,8 @@ type NavItemsState = {
 }
 
 export const useFooter = () => {
-  const navBlocks = useSelector((state: FooterNavItemsState) => state.footerNavItems)
-  const navItems = useSelector((state: NavItemsState) => state.navItems)
+  const navBlocks = useSelector((state: FooterNavItemsState): FooterNavBlockType[] => state.footerNavItems)
+  const navItems = useSelector((state: NavItemsState): NavItemType[] => state.navItems)
 
   return {
     navBlocks,

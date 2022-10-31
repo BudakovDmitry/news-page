@@ -7,12 +7,10 @@ type MainNewsState = {
 }
 
 export const useMainNewsSection = () => {
-  const [activeSlide, setActiveSlide] = useState(0)
-  const news = useSelector((state: MainNewsState) => state.mainNews)
+  const [activeSlide, setActiveSlide] = useState<number>(0)
+  const news = useSelector((state: MainNewsState): MainNewsType[] => state.mainNews)
 
-  const handleSwitchSlide = (slide: number) => {
-    setActiveSlide(slide)
-  }
+  const handleSwitchSlide = (slide: number): void => setActiveSlide(slide)
 
   return {
     news,

@@ -7,7 +7,7 @@ type AllPhotoNewsState = {
 
 export const useEditorsChoiceNews = () => {
 
-  const news = useSelector((state: AllPhotoNewsState) => state.allPhotoNews)
+  const news = useSelector((state: AllPhotoNewsState): PhotoNewsType[] => state.allPhotoNews)
 
   return {
     news

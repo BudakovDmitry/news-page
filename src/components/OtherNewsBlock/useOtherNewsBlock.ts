@@ -6,7 +6,7 @@ type RubricsState = {
 }
 
 export const useOtherNewsBlock = () => {
-  const rubrics = useSelector((state: RubricsState) => state.rubrics)
+  const rubrics = useSelector((state: RubricsState): RubricType[] => state.rubrics)
 
   return {
     rubrics

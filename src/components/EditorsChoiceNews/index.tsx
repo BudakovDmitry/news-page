@@ -2,6 +2,7 @@ import PhotoNews from 'src/components/PhotoNews'
 import * as Styled from 'src/components/EditorsChoiceNews/styles'
 import { useEditorsChoiceNews } from 'src/components/EditorsChoiceNews/useEditorsChoiceNews'
 import { isMobile } from 'src/helpers'
+import { PhotoNewsType } from 'src/types'
 
 const ArrowCicleIcon = require('src/images/arrow-cicle-icon.png')
 
@@ -14,7 +15,7 @@ const EditorsChoiceNews = () => {
         Вибір редакції
       </Styled.EditorsChoiceNewsHeader>
       <Styled.EditorsChoiceNewsGridContainer>
-        {(isMobile() ? news.slice(0, 3) : news).map(item => (
+        {(isMobile() ? news.slice(0, 3) : news).map((item: PhotoNewsType) => (
           <PhotoNews
             key={item.id}
             image={item.image}

@@ -6,7 +6,7 @@ type ColumnistsState = {
 }
 
 export const useColumns = () => {
-  const columnists = useSelector((state: ColumnistsState) => state.columnists)
+  const columnists = useSelector((state: ColumnistsState): ColumnistType[] => state.columnists)
 
   return {
     columnists

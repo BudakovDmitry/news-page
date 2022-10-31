@@ -10,7 +10,7 @@ type StatisticsState = {
 
 
 export const useStatisticsLine = () => {
-  const statistics = useSelector((state: StatisticsState) => state.statistics)
+  const statistics = useSelector((state: StatisticsState): StatisticsType[] => state.statistics)
   const [translate, setTranslate] = useState<number>(DEFAULT_TRANSLATE)
   const getValueTranslate = (): number => isMobile() ? MOBILE_TRANSLATE : DESKTOP_TRANSLATE
 

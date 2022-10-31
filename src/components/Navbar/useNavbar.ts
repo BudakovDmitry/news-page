@@ -8,11 +8,11 @@ type NavbarState = {
 }
 
 export const useNavbar = () => {
-  const sections = useSelector((state: NavbarState) => state.navbarSections)
-  const language = useSelector((state: LanguageState) => state.language)
+  const sections = useSelector((state: NavbarState): NavbarSectionType[] => state.navbarSections)
+  const language = useSelector((state: LanguageState): string => state.language)
   const { dispatch } = usePage()
 
-  const handleActiveSection = (section: NavbarSectionType) => {
+  const handleActiveSection = (section: NavbarSectionType): void => {
     dispatch(
       updateActiveSection(section)
     )

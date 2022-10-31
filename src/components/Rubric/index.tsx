@@ -2,7 +2,7 @@ import Filter from 'src/components/Filter'
 import NewsList from 'src/components/NewsList'
 import PhotoNews from 'src/components/PhotoNews'
 import * as Styled from 'src/components/Rubric/styles'
-import { RubricType } from 'src/types'
+import { RubricType, PhotoNewsType } from 'src/types'
 import { rubricFilterItems } from 'src/components/Rubric/constants'
 import { isMobile } from 'src/helpers'
 import { useRubric } from 'src/components/Rubric/useRubric'
@@ -11,7 +11,7 @@ type RubricProps = {
   rubric: RubricType
 }
 
-const Rubric = ({ rubric }: RubricProps) => {
+const Rubric = ({ rubric = {} as RubricType }: RubricProps) => {
   const { activeFilter, handleChangeFilter } = useRubric()
 
   return (
@@ -40,7 +40,7 @@ const Rubric = ({ rubric }: RubricProps) => {
                 typeIcon={rubric.news.mainLargeNews[0].typeIcon}
               />
             </Styled.LargeNews>
-            {rubric.news.mainSmallNews.map(news => (
+            {rubric.news.mainSmallNews.map((news: PhotoNewsType) => (
               <PhotoNews
                 key={news.id}
                 image={news.image}

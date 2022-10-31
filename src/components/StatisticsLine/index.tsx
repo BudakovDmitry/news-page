@@ -1,5 +1,6 @@
 import { useStatisticsLine } from 'src/components/StatisticsLine/useStatisticsLine'
 import * as Styled from 'src/components/StatisticsLine/styles'
+import { StatisticsType } from 'src/types'
 
 const StatisticsLine = () => {
   const { statistics, translate } = useStatisticsLine()
@@ -12,7 +13,7 @@ const StatisticsLine = () => {
         </Styled.StatisticsLineHeader>
       </Styled.StatisticsLineHeaderContainer>
       <Styled.StatisticsLineContainerItems translate={translate}>
-        {statistics.map(item => (
+        {statistics.map((item: StatisticsType) => (
           <Styled.StatisticsLineContainerItem key={item.id}>
             <Styled.StatisticsLineItemImage
               src={require(`src/images/${item.image}`)}

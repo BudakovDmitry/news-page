@@ -1,6 +1,6 @@
 import TextNews from 'src/components/TextNews'
 import * as Styled from 'src/components/RegionsNewsBlock/styles'
-import { DateNewsType } from 'src/types'
+import { DateNewsType, NewsType } from 'src/types'
 import { slicedRegionsNewsByDate } from 'src/helpers'
 
 const ArrowRight = require('src/images/arrow-black-icon.png')
@@ -17,19 +17,21 @@ const RegionsNewsBlock = ({
   return (
     <Styled.RegionsNewsBlockContainer>
       <Styled.RegionsNewsBlockTitle>{region}</Styled.RegionsNewsBlockTitle>
-      {news.map(item => (
+      {news.map((item: DateNewsType) => (
         <Styled.RegionsNewsDateBlock key={item.id}>
           <Styled.RegionsNewsDate>{item.date}</Styled.RegionsNewsDate>
-          {slicedRegionsNewsByDate(item.news, news.length).map(item => (
-            <TextNews
-              key={item.id}
-              time={item.time}
-              text={item.text}
-              breaking={item.breaking}
-              info={item.info}
-              infoImage={item.infoImage}
-            />
-          ))}
+          {slicedRegionsNewsByDate(item.news, news.length).map(
+            (item: NewsType) => (
+              <TextNews
+                key={item.id}
+                time={item.time}
+                text={item.text}
+                breaking={item.breaking}
+                info={item.info}
+                infoImage={item.infoImage}
+              />
+            ),
+          )}
         </Styled.RegionsNewsDateBlock>
       ))}
       <Styled.RegionsNewsMoreNewsContainer>

@@ -6,7 +6,7 @@ type PromosState = {
 }
 
 export const usePromo = () => {
-  const promos = useSelector((state: PromosState) => state.promos)
+  const promos = useSelector((state: PromosState): PromoType[] => state.promos)
   
   return {
     promos

@@ -6,7 +6,7 @@ type SocialLinksState = {
 }
 
 export const useFooterSocialLinkContainer = () => {
-  const socialLinks = useSelector((state: SocialLinksState) => state.socialLinks)
+  const socialLinks = useSelector((state: SocialLinksState): SocialLinkType[] => state.socialLinks)
 
   return {
     socialLinks

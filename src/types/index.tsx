@@ -109,7 +109,7 @@ export type FooterNavItem = {
   name: string
 }
 
-export type FooterNavBlock = {
+export type FooterNavBlockType = {
   id: number
   title: string
   items: FooterNavItem[]

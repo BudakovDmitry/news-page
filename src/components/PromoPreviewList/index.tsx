@@ -9,13 +9,13 @@ type PromoPreviewListProps = {
   promos: PromoType[]
 }
 
-const PromoPreviewList = ({ promos }: PromoPreviewListProps) => {
+const PromoPreviewList = ({ promos = [] }: PromoPreviewListProps) => {
   return (
     <Styled.PreviewListContainer>
       {!isMobile() ? (
         <Styled.GradientBox>
           <Styled.PreviewsContainer>
-            {promos.map(promo => (
+            {promos.map((promo: PromoType) => (
               <PromoPreviewItem
                 key={promo.id}
                 date={promo.date}
@@ -29,7 +29,7 @@ const PromoPreviewList = ({ promos }: PromoPreviewListProps) => {
         </Styled.GradientBox>
       ) : (
         <>
-          {promos.map(promo => (
+          {promos.map((promo: PromoType) => (
             <PromoPreviewItem
               key={promo.id}
               date={promo.date}

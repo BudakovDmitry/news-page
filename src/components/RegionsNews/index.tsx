@@ -4,6 +4,7 @@ import { useRegionsNews } from 'src/components/RegionsNews/useRegionsNews'
 import { isMobile } from 'src/helpers'
 import Filter from 'src/components/Filter'
 import { regionsNewsFilters } from 'src/components/RegionsNews/constants'
+import { RegionsNewsType } from 'src/types'
 
 const RegionsNews = () => {
   const { news, activeFilter, handleChangeFilter } = useRegionsNews()
@@ -24,7 +25,7 @@ const RegionsNews = () => {
         />
       )}
       <Styled.RegionContainer>
-        {news.map(item => (
+        {news.map((item: RegionsNewsType) => (
           <RegionsNewsBlock
             key={item.id}
             region={item.region}

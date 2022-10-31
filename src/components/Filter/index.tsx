@@ -7,10 +7,14 @@ type FilterProps = {
   onChange?: (id: number) => void
 }
 
-const Filter = ({ filterItems, active, onChange = () => {} }: FilterProps) => {
+const Filter = ({
+  filterItems = [],
+  active = 0,
+  onChange = () => {},
+}: FilterProps) => {
   return (
     <Styled.FilterContainer>
-      {filterItems.map(filter => (
+      {filterItems.map((filter: FilterType) => (
         <Styled.FilterButton
           key={filter.id}
           onClick={() => {

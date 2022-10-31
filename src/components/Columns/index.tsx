@@ -1,6 +1,7 @@
 import ColumnsItem from 'src/components/ColumnsItem'
 import * as Styled from 'src/components/Columns/styles'
 import { useColumns } from 'src/components/Columns/useColumns'
+import { ColumnistType } from 'src/types'
 
 const Columns = () => {
   const { columnists } = useColumns()
@@ -12,7 +13,7 @@ const Columns = () => {
         <Styled.ColumnsHeaderLink>Всі колонки</Styled.ColumnsHeaderLink>
       </Styled.ColumnsHeaderContainer>
       <Styled.ColumnistsContainer>
-        {columnists.map(columnist => (
+        {columnists.map((columnist: ColumnistType) => (
           <ColumnsItem
             key={columnist.id}
             name={columnist.name}

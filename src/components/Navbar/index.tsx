@@ -1,5 +1,6 @@
 import { useNavbar } from 'src/components/Navbar/useNavbar'
 import * as Styled from 'src/components/Navbar/styles'
+import { NavbarSectionType } from 'src/types'
 
 import { Language } from 'src/types'
 
@@ -11,7 +12,7 @@ const Navbar = () => {
 
   return (
     <Styled.NavbarContainer>
-      {sections.map(section => (
+      {sections.map((section: NavbarSectionType) => (
         <Styled.NavbarItem
           key={section.id}
           active={section.active}

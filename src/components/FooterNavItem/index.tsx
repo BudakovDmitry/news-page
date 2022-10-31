@@ -8,7 +8,7 @@ type FooterNavItemProps = {
 
 const FooterNavItem = ({
   titleUppercase = false,
-  item,
+  item = {} as NavItemType,
 }: FooterNavItemProps) => {
   return (
     <Styled.FooterNavItemContainer>

@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
 export const useFooterNavBlock = () => {
-  const [shownNavItems, setShownNavItems] = useState(false)
+  const [shownNavItems, setShownNavItems] = useState<boolean>(false)
 
-  const handleShownNavItems = () => shownNavItems ? setShownNavItems(false) : setShownNavItems(true)
+  const handleShownNavItems = (): void => shownNavItems ? setShownNavItems(false) : setShownNavItems(true)
 
   return {
     shownNavItems,

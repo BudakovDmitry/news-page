@@ -1,5 +1,7 @@
 import { isMobile } from 'src/helpers'
 import * as Styled from 'src/components/Header/styles'
+import { useHeader } from 'src/components/Header/useHeader'
+import { Language } from 'src/types'
 
 const MenuIcon = require('src/images/menu-button-icon.png')
 const SearchIcon = require('src/images/search-icon.png')
@@ -11,6 +13,8 @@ const LineIcon = require('src/images/line-icon.png')
 const SearchIconForMobile = require('src/images/serach-icon-2.png')
 
 const Header = () => {
+  const { handleSwitchLang, language, onChangeLang } = useHeader()
+
   return (
     <Styled.HeaderContainer>
       <Styled.HeaderButtonMenu>
@@ -55,15 +59,32 @@ const Header = () => {
           <Styled.SearchButton>
             <Styled.SearchButtonImage src={SearchIconForMobile} alt="search" />
           </Styled.SearchButton>
-          <Styled.SelectLang name="lang" id="lang">
-            <Styled.SelectLangItem value="ua">Ua</Styled.SelectLangItem>
-            <Styled.SelectLangItem value="ru">Ru</Styled.SelectLangItem>
+          <Styled.SelectLang
+            name="lang"
+            id="lang"
+            value={language}
+            onChange={onChangeLang}
+          >
+            <Styled.SelectLangItem value={Language.UA}>
+              Ua
+            </Styled.SelectLangItem>
+            <Styled.SelectLangItem value={Language.RU}>
+              Ru
+            </Styled.SelectLangItem>
           </Styled.SelectLang>
         </>
       )}
       <Styled.HeaderLangList>
-        <Styled.HeaderLangListItem>Ru</Styled.HeaderLangListItem>
-        <Styled.HeaderLangListItem>Ua</Styled.HeaderLangListItem>
+        <Styled.HeaderLangListItem
+          onClick={() => handleSwitchLang(Language.RU)}
+        >
+          Ru
+        </Styled.HeaderLangListItem>
+        <Styled.HeaderLangListItem
+          onClick={() => handleSwitchLang(Language.UA)}
+        >
+          Ua
+        </Styled.HeaderLangListItem>
       </Styled.HeaderLangList>
     </Styled.HeaderContainer>
   )

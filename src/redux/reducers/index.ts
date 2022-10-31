@@ -11,7 +11,7 @@ import Promos from 'src/json/Promos.json'
 import FooterNavItems from 'src/json/FooterNavItems.json'
 import NavItems from 'src/json/NavItems.json'
 import SocialLinks from 'src/json/SocialLinks.json'
-import { Language } from 'src/types'
+import { Language, NavbarSectionType } from 'src/types'
 
 const initialState = {
   navbarSections: NavbarSections,
@@ -32,10 +32,15 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case 'SWITCH_LANG': 
+      return {
+        ...state,
+        language: action.payload
+      }
     case 'UPDATE_ACTIVE_SECTION':
       return {
         ...state,
-        navbarSections: state.navbarSections.map(section => {
+        navbarSections: state.navbarSections.map((section: NavbarSectionType) => {
         if (section.active === true) {
           return { 
             ...section,

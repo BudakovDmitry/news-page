@@ -115,6 +115,11 @@ export type FooterNavBlock = {
   items: FooterNavItem[]
 }
 
+export type NavItemType = {
+  id: number
+  title: string
+}
+
 export type SocialLinkType = {
   id: number
   name: string

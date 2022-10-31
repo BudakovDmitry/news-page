@@ -1100,30 +1100,27 @@ const initialState = {
       title: 'Спорт',
       items: []
     },
+  ],
+  navItems: [
     {
-      id: 12,
+      id: 0,
       title: 'Про нас',
-      items: []
     },
     {
-      id: 13,
+      id: 1,
       title: 'Контакти',
-      items: []
     },
     {
-      id: 14,
+      id: 2,
       title: 'Структура власності',
-      items: []
     },
     {
-      id: 15,
+      id: 3,
       title: 'Команда',
-      items: []
     },
     {
-      id: 16,
+      id: 4,
       title: 'Медіакіт',
-      items: []
     },
   ],
   socialLinks: [

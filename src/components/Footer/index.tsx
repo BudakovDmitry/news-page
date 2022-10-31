@@ -3,9 +3,10 @@ import * as Styled from 'src/components/Footer/styles'
 import { useFooter } from 'src/components/Footer/useFooter'
 import FooterSocialLinkContainer from 'src/components/FooterSocialLinkContainer'
 import FooterInfo from 'src/components/FooterInfo'
+import FooterNavItem from 'src/components/FooterNavItem'
 
 const Footer = () => {
-  const { navBlocks } = useFooter()
+  const { navBlocks, navItems } = useFooter()
 
   return (
     <Styled.FooterContainer>
@@ -37,12 +38,8 @@ const Footer = () => {
             ))}
           </Styled.FooterNavContainerBlock>
           <Styled.FooterNavContainerBlock>
-            {navBlocks.slice(12, 17).map(block => (
-              <FooterNavBlock
-                key={block.id}
-                navBlock={block}
-                titleUppercase={true}
-              />
+            {navItems.map(item => (
+              <FooterNavItem key={item.id} item={item} />
             ))}
           </Styled.FooterNavContainerBlock>
         </Styled.FooterNavContainer>

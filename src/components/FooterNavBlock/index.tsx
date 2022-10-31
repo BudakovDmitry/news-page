@@ -1,4 +1,4 @@
-import { FooterNavBlock } from 'src/types'
+import { FooterNavBlock, NavItemType } from 'src/types'
 import * as Styled from 'src/components/FooterNavBlock/styles'
 
 type FooterNavBlockProps = {

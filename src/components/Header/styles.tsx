@@ -113,6 +113,9 @@ export const HeaderLineIcon = styled.img`
 export const HeaderLangList = styled.ul`
   display: flex;
   align-items: center;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    display: none;
+  }
 `
 
 export const HeaderLangListItem = styled.li`
@@ -130,4 +133,24 @@ export const HeaderLangListItem = styled.li`
   &:first-child {
     margin-right: 16px;
   }
+`
+
+export const SearchButton = styled.button`
+  border: none;
+  background: none;
+  margin-right: 12px;
+`
+
+export const SearchButtonImage = styled.img``
+
+export const SelectLang = styled.select`
+  padding: 10px 0px 10px 10px;
+  text-transform: uppercase;
+  border: none;
+  font-size: 16px;
+  color: #2d2d2d;
+`
+
+export const SelectLangItem = styled.option`
+  text-transform: uppercase;
 `

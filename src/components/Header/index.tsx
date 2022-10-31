@@ -1,3 +1,4 @@
+import { isMobile } from 'src/helpers'
 import * as Styled from 'src/components/Header/styles'
 
 const MenuIcon = require('src/images/menu-button-icon.png')
@@ -7,6 +8,7 @@ const FacebookIcon = require('src/images/facebook-logo.png')
 const InstagramIcon = require('src/images/instagram-logo.png')
 const YoutubeIcon = require('src/images/youtube-logo.png')
 const LineIcon = require('src/images/line-icon.png')
+const SearchIconForMobile = require('src/images/serach-icon-2.png')
 
 const Header = () => {
   return (
@@ -48,6 +50,17 @@ const Header = () => {
         </Styled.HeaderSocialLink>
       </Styled.HeaderSocialLinkList>
       <Styled.HeaderLineIcon src={LineIcon} alt="line-icon" />
+      {isMobile() && (
+        <>
+          <Styled.SearchButton>
+            <Styled.SearchButtonImage src={SearchIconForMobile} alt="search" />
+          </Styled.SearchButton>
+          <Styled.SelectLang name="lang" id="lang">
+            <Styled.SelectLangItem value="ua">Ua</Styled.SelectLangItem>
+            <Styled.SelectLangItem value="ru">Ru</Styled.SelectLangItem>
+          </Styled.SelectLang>
+        </>
+      )}
       <Styled.HeaderLangList>
         <Styled.HeaderLangListItem>Ru</Styled.HeaderLangListItem>
         <Styled.HeaderLangListItem>Ua</Styled.HeaderLangListItem>

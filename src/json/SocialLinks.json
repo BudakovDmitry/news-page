@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "YouTube",
+    "icon": "YouTube-color-logo.png"
+  },
+  {
+    "id": 1,
+    "name": "Telegram",
+    "icon": "Telegram-color-logo.png"
+  },
+  {
+    "id": 2,
+    "name": "Instagram",
+    "icon": "Instagram-color-logo.png"
+  },
+  {
+    "id": 3,
+    "name": "Facebook",
+    "icon": "Facebook-color-logo.png"
+  },
+  {
+    "id": 4,
+    "name": "TikTok",
+    "icon": "TikTok-color-logo.png"
+  },
+  {
+    "id": 5,
+    "name": "Google News",
+    "icon": "GoogleNews-color-logo.png"
+  }
+]

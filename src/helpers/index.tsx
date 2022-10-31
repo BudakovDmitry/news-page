@@ -8,7 +8,8 @@ export const isMobile = (): boolean =>
 export const slicedRegionsNewsByDate = (
   items: NewsType[],
   amountDate: number,
-) => {
+): NewsType[] => {
   const amountSlice = 4 / amountDate
+
   return items.slice(0, amountSlice)
 }

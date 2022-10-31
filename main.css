@@ -1,0 +1,43 @@
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
+  \*****************************************************************/
+@font-face {
+  font-family: 'TT Severs';
+  src: url(./25ed73a3c511fe8d5b19.otf);
+}
+
+@font-face {
+  font-family: 'TT Severs Bold';
+  src: url(./0197be2e7ca8142822a2.otf);
+}
+
+@font-face {
+  font-family: 'TT Severs Italic';
+  src: url(./ad4b28283347b84098c9.otf);
+}
+
+@font-face {
+  font-family: 'TT Severs Medium';
+  src: url(./d06566ee3b48f56a3dec.otf);
+}
+
+@font-face {
+  font-family: 'TT Severs DemiBold';
+  src: url(./ebbf504b2a096922e617.otf);
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'TT Severs';
+  font-size: 16px;
+  width: 100%;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}

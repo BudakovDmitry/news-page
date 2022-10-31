@@ -9,6 +9,7 @@ export const RegionsNewsBlockContainer = styled.div`
   position: relative;
   @media (max-width: ${BREAKPOINTS.small}px) {
     min-width: 80%;
+    margin-right: 10px;
   }
 `
 

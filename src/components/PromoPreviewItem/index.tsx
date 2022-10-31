@@ -1,12 +1,15 @@
 import * as Styled from 'src/components/PromoPreviewItem/styles'
 
-const PromoPreviewItem = () => {
+type PromoPreviewItemProps = {
+  date: string
+  text: string
+}
+
+const PromoPreviewItem = ({ date = '', text = '' }: PromoPreviewItemProps) => {
   return (
     <Styled.PromoPreviewItemContainer>
-      <Styled.PromoPreviewItemDate>05 серпня 11:00</Styled.PromoPreviewItemDate>
-      <Styled.PromoPreviewItemText>
-        Замовте нові флагмани Samsung Galaxy Fold4|Flip4 і отримуйте подарунки
-      </Styled.PromoPreviewItemText>
+      <Styled.PromoPreviewItemDate>{date}</Styled.PromoPreviewItemDate>
+      <Styled.PromoPreviewItemText>{text}</Styled.PromoPreviewItemText>
     </Styled.PromoPreviewItemContainer>
   )
 }

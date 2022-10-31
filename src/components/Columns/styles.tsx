@@ -8,7 +8,7 @@ export const ColumnsContainer = styled.div`
   border-radius: 12px;
   max-width: 304px;
   text-align: center;
-  height: 930px;
+  height: 1030px;
   @media (max-width: ${BREAKPOINTS.small}px) {
     background: none;
     padding: 10px 0 10px 10px;

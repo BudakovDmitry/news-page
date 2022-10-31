@@ -97,3 +97,9 @@ export type RubricType = {
   title: string
   news: RubricNewsType
 }
+
+export type PromoType = {
+  id: number
+  date: string
+  text: string
+}

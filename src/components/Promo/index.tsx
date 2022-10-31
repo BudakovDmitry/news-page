@@ -1,8 +1,11 @@
 import PromoItem from 'src/components/PromoItem'
 import * as Styled from 'src/components/Promo/styles'
 import PromoPreviewList from 'src/components/PromoPreviewList'
+import { usePromo } from 'src/components/Promo/usePromo'
 
 const Promo = () => {
+  const { promos } = usePromo()
+
   return (
     <Styled.PromoContainer>
       <Styled.PromoHeaderContainer>
@@ -10,7 +13,7 @@ const Promo = () => {
         <Styled.PromoHeaderLink>Всі матеріали</Styled.PromoHeaderLink>
       </Styled.PromoHeaderContainer>
       <PromoItem />
-      <PromoPreviewList />
+      <PromoPreviewList promos={promos} />
     </Styled.PromoContainer>
   )
 }

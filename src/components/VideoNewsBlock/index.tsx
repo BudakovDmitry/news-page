@@ -1,10 +1,14 @@
+import { useVideoNewsBlock } from 'src/components/VideoNewsBlock/useVideoNewsBlock'
 import PhotoNews from 'src/components/PhotoNews'
 import * as Styled from 'src/components/VideoNewsBlock/styles'
 import { isMobile } from 'src/helpers'
+import { VideoNewsType } from 'src/types'
 
 const ArrowRight = require('src/images/arrow-white-icon.png')
 
 const VideoNewsBlock = () => {
+  const { videoNews } = useVideoNewsBlock()
+
   return (
     <Styled.VideoNewsBlock>
       <Styled.GradientBox>
@@ -19,43 +23,28 @@ const VideoNewsBlock = () => {
             </Styled.VideoNewsBlockHeaderMoreNews>
           </Styled.VideoNewsBlockHeader>
           <Styled.VideoNewsContainer>
-            <PhotoNews
-              image="5.png"
-              date="05 серпня 11:00"
-              text='"Це не Джошуа": Усик розповів, кого вважає своїм головним суперником'
-              large={!isMobile()}
-              colorText="#ffffff"
-              icon={require('src/images/play-icon.png')}
-            />
+            {videoNews.slice(0, 1).map((news: VideoNewsType) => (
+              <PhotoNews
+                key={news.id}
+                image={news.image}
+                date={news.date}
+                text={news.text}
+                large={!isMobile()}
+                colorText="#ffffff"
+                icon={require('src/images/play-icon.png')}
+              />
+            ))}
             <Styled.VideoNewsSmallContainer>
-              <PhotoNews
-                image="5.png"
-                date="05 серпня 11:00"
-                text='"Це не Джошуа": Усик розповів, кого вважає своїм головним суперником'
-                colorText="#ffffff"
-                icon={require('src/images/play-icon.png')}
-              />
-              <PhotoNews
-                image="5.png"
-                date="05 серпня 11:00"
-                text='"Це не Джошуа": Усик розповів, кого вважає своїм головним суперником'
-                colorText="#ffffff"
-                icon={require('src/images/play-icon.png')}
-              />
-              <PhotoNews
-                image="5.png"
-                date="05 серпня 11:00"
-                text='"Це не Джошуа": Усик розповів, кого вважає своїм головним суперником'
-                colorText="#ffffff"
-                icon={require('src/images/play-icon.png')}
-              />
-              <PhotoNews
-                image="5.png"
-                date="05 серпня 11:00"
-                text='"Це не Джошуа": Усик розповів, кого вважає своїм головним суперником'
-                colorText="#ffffff"
-                icon={require('src/images/play-icon.png')}
-              />
+              {videoNews.slice(1).map((news: VideoNewsType) => (
+                <PhotoNews
+                  key={news.id}
+                  image={news.image}
+                  date={news.date}
+                  text={news.text}
+                  colorText="#ffffff"
+                  icon={require('src/images/play-icon.png')}
+                />
+              ))}
             </Styled.VideoNewsSmallContainer>
           </Styled.VideoNewsContainer>
           {isMobile() && (

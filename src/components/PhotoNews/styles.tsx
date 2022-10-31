@@ -33,8 +33,8 @@ export const PhotoNewsText = styled.p<PhotoNewsTextProps>`
 
 export const PhotoNewsIcon = styled.img<PhotoNewsIconProps>`
   position: absolute;
-  bottom: ${props => (props.large ? '250px' : '100px')};
-  left: 10px;
+  top: ${props => (props.large ? '270px' : '140px')};
+  left: 15px;
   opacity: ${props => (props.large ? '1' : '0.5')};
   width: ${props => (props.large ? '40px' : '20px')};
 `

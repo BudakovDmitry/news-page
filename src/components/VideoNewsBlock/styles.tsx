@@ -15,7 +15,7 @@ export const VideoNewsBlock = styled.div`
       rgba(24, 40, 64, 0.95) 100%
     );
     width: 100%;
-    height: 1800px;
+    height: 1900px;
   }
 `
 

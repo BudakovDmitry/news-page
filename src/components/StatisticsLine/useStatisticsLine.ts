@@ -15,11 +15,11 @@ export const useStatisticsLine = () => {
   const getValueTranslate = (): number => isMobile() ? MOBILE_TRANSLATE : DESKTOP_TRANSLATE
 
   useEffect(() => {
-    setTranslate(prevState => prevState - getValueTranslate())
+    setTranslate((prevState: number): number => prevState - getValueTranslate())
   }, [])
 
   setTimeout(() => {
-    setTranslate(prevState => translate === DEFAULT_TRANSLATE ? prevState - getValueTranslate() : prevState + getValueTranslate())
+    setTranslate((prevState: number): number => translate === DEFAULT_TRANSLATE ? prevState - getValueTranslate() : prevState + getValueTranslate())
   }, isMobile() ? 20000 : 6000)
 
 

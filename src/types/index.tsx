@@ -54,6 +54,8 @@ export type PhotoNewsType = {
   typeIcon: string
 }
 
+export type VideoNewsType = PhotoNewsType
+
 export type DateNewsType = {
   id: number
   date: string

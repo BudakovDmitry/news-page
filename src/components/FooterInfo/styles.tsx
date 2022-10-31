@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { BREAKPOINTS } from 'src/constants'
 
 export const FooterInfoContainer = styled.div`
   border-top: 1px solid #dbdbdb;
@@ -16,6 +17,9 @@ export const FooterInfoPoliticsContainer = styled.div`
   display: flex;
   gap: 32px;
   justify-content: center;
+  @media (max-width: ${BREAKPOINTS.small}px) {
+    flex-direction: column;
+  }
 `
 
 export const FooterInfoPolitic = styled.a`

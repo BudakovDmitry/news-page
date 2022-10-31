@@ -1,10 +1,11 @@
 import * as Styled from 'src/components/FooterInfo/styles'
+import { getCurrentYear } from 'src/utils'
 
 const FooterInfo = () => {
   return (
     <Styled.FooterInfoContainer>
       <Styled.FooterInfoItem>
-        © 2020-2022, ТОВ «Медіа Мережі»
+        {`© 2020-${getCurrentYear()}, ТОВ «Медіа Мережі»`}
       </Styled.FooterInfoItem>
       <Styled.FooterInfoPoliticsContainer>
         <Styled.FooterInfoPolitic>

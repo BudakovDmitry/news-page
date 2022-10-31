@@ -7,6 +7,7 @@ import MainNewsSection from 'src/components/MainNewsSection'
 import AllNewsBlock from 'src/components/AllNewsBlock'
 import VideoNewsBlock from 'src/components/VideoNewsBlock'
 import OtherNewsBlock from 'src/components/OtherNewsBlock'
+import Footer from 'src/components/Footer'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <AllNewsBlock />
       <VideoNewsBlock />
       <OtherNewsBlock />
+      <Footer />
     </Provider>
   )
 }

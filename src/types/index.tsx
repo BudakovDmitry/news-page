@@ -103,3 +103,20 @@ export type PromoType = {
   date: string
   text: string
 }
+
+export type FooterNavItem = {
+  id: number
+  name: string
+}
+
+export type FooterNavBlock = {
+  id: number
+  title: string
+  items: FooterNavItem[]
+}
+
+export type SocialLinkType = {
+  id: number
+  name: string
+  icon: string
+}

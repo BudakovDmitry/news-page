@@ -20,11 +20,11 @@ const FooterNavBlock = ({
   if (isMobile()) {
     return (
       <Styled.FooterNavBlockContainer>
-        <Styled.TitleContainer>
+        <Styled.TitleContainer onClick={handleShownNavItems}>
           <Styled.FooterNavBlockTitle uppercase={titleUppercase}>
             {navBlock.title}
           </Styled.FooterNavBlockTitle>
-          <Styled.ShownListItemButton onClick={handleShownNavItems}>
+          <Styled.ShownListItemButton>
             {shownNavItems ? (
               <Styled.ShownListItemButtonImage
                 src={HideImage}

@@ -11,7 +11,7 @@ export const StatisticsLineContainer = styled.div`
   gap: 40px;
   background-color: #121b30;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 `
 export const StatisticsLineHeaderContainer = styled.div`
   height: 30px;
